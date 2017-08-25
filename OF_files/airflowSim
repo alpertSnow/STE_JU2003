@@ -1,0 +1,8 @@
+#!/bin/bash
+of211
+decomposePar -force 2>err 1>log
+bash solve.bash &
+bash res.bash &
+wait
+reconstructPar -latestTime 2>>err 1>>log
+rm -r processor*
