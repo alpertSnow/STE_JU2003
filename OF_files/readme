@@ -5,12 +5,12 @@ No. of receptors: 9
 ***
 ## Experiment info
 ### Met
-Name: M01,	St. Anthony’s Hospital,	N 10th and Dewey  
+Station name: M01, St. Anthony’s Hospital, N 10th and Dewey  
 Location: (633954,3927040,45)  
 Wind direction: 182.33 ± 11.62 degree  
 Wind speed: 7.41 m/s  
-### Release site
-Name: Park  
+### Release
+Site name: Park  
 Location: (634686,3926036,0)  
 Strength: 2.0 g/s, continuous  
 ### Receptors
@@ -26,8 +26,9 @@ No. Easting Northing height
 8. 515 634651 3926912 0  
 9. 516 634785 3926905 0  
 ***
-## CFD info
+## CFD airflow info
 Turbulence model: SKE
+Solver: simpleFoam
 Building model: center blocks (2,2)
 ### Location mapping 
 > (UTM E, UTM N) -> CFD location (x,y):  
@@ -37,7 +38,7 @@ Building model: center blocks (2,2)
 ### Mesh info
 Total No.: 4067283, unstructured  
 Min size: (2,2,2)  
-snappyHexMesh: castellatedMesh T; snap T; addLayers F;  
+snappyHexMesh: castellatedMesh T; snap T; addLayers F;
 refinmentBox: min (200,0,0) max (850,900,50)  
 ### B.C.
 Wind direction: 180 degree  
@@ -46,10 +47,12 @@ Ground: nutRoughWallFunction 0.29
 ### Other settings
 Sc_t = 0.7  
 Discretization: 1st order upwind  
+### adjoint info
+sourceProperties made by sourcePropertiesMaker.R  
 ***
 ## STE info
 ### Potential source region
     x <- seq(201,849,2)  
     y <- seq(1,899,2)  
     z <- seq(1,1,1)  
-Run by sampleDictMaker  
+Run by sampleDictMaker.R  
