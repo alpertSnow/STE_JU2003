@@ -9,22 +9,36 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    location    "constant";
-    object      transportProperties;
+    class       volScalarField;
+    object      Tr07;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-transportModel  Newtonian;
+dimensions      [0 0 0 1 0 0 0];
 
-nu              nu [ 0 2 -1 0 0 0 0 ] 1.5e-05;
+internalField   uniform 0;
 
-Pr              Pr [0 0 0 0 0 0 0] 1.00;
-
-Prt           	Prt [0 0 0 0 0 0 0] 0.70;
-
-nutLower		nutLower [ 0 2 -1 0 0 0 0 ] 0.0;
-
-nutUpper		nutUpper [ 0 2 -1 0 0 0 0 ] 1.0e+10;
+boundaryField
+{
+	Inlet
+    {
+        type            zeroGradient;
+    }
+    Outlet
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+		
+	"(Ground|Building)"
+	{
+		type			zeroGradient;
+	}
+	
+	"(Paral|Roof)"
+	{
+		type			symmetryPlane;
+	}
+}
 
 // ************************************************************************* //

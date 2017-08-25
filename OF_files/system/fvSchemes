@@ -26,6 +26,16 @@ gradSchemes
     default         Gauss linear;
     grad(p)         Gauss linear;
     grad(U)         Gauss linear;
+    grad(T)	    	Gauss linear;
+    grad(Tr01)		Gauss linear;
+	grad(Tr02)		Gauss linear;
+	grad(Tr03)		Gauss linear;
+	grad(Tr04)		Gauss linear;
+	grad(Tr05)		Gauss linear;
+	grad(Tr06)		Gauss linear;
+	grad(Tr07)		Gauss linear;
+	grad(Tr08)		Gauss linear;
+	grad(Tr09)		Gauss linear;
 }
 
 divSchemes
@@ -35,6 +45,15 @@ divSchemes
     div(phi,k)      Gauss upwind;
     div(phi,epsilon) Gauss upwind;
     div((nuEff*dev(T(grad(U))))) Gauss linear;
+    div(-phi,Tr01)		Gauss limitedLinear 1;
+	div(-phi,Tr02)		Gauss limitedLinear 1;
+	div(-phi,Tr03)		Gauss limitedLinear 1;
+	div(-phi,Tr04)		Gauss limitedLinear 1;
+	div(-phi,Tr05)		Gauss limitedLinear 1;
+	div(-phi,Tr06)		Gauss limitedLinear 1;
+	div(-phi,Tr07)		Gauss limitedLinear 1;
+	div(-phi,Tr08)		Gauss limitedLinear 1;
+	div(-phi,Tr09)		Gauss limitedLinear 1;
 }
 
 laplacianSchemes
@@ -44,12 +63,23 @@ laplacianSchemes
     laplacian((1|A(U)),p) Gauss linear corrected;
     laplacian(DkEff,k) Gauss linear corrected;
     laplacian(DepsilonEff,epsilon) Gauss linear corrected;
+    laplacian(alphaEff,T) Gauss linear corrected;
+	laplacian(alphaEff,Tr01) Gauss linear corrected;
+	laplacian(alphaEff,Tr02) Gauss linear corrected;
+	laplacian(alphaEff,Tr03) Gauss linear corrected;
+	laplacian(alphaEff,Tr04) Gauss linear corrected;
+	laplacian(alphaEff,Tr05) Gauss linear corrected;
+	laplacian(alphaEff,Tr06) Gauss linear corrected;
+	laplacian(alphaEff,Tr07) Gauss linear corrected;
+	laplacian(alphaEff,Tr08) Gauss linear corrected;
+	laplacian(alphaEff,Tr09) Gauss linear corrected;
 }
 
 interpolationSchemes
 {
     default         linear;
     interpolate(U)  linear;
+    interpolate(T)  linear;
 }
 
 snGradSchemes

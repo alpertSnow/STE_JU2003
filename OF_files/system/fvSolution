@@ -52,6 +52,14 @@ solvers
         tolerance       1e-07;
         relTol          0.1;
     }
+    
+    "(T|Tr01|Tr02|Tr03|Tr04|Tr05|Tr06|Tr07|Tr08|Tr09)"
+    {
+        solver          PBiCG;
+        preconditioner  DILU;
+        tolerance       1e-06;
+        relTol          0;
+    }
 }
 
 SIMPLE
@@ -63,6 +71,8 @@ SIMPLE
         p               1e-5;
         U               1e-6;
         "(k|epsilon)"   1e-6;
+        T				1e-5;
+        "(Tr01|Tr02|Tr03|Tr04|Tr05|Tr06|Tr07|Tr08|Tr09|Tr10)"				1e-5;
     }
 }
 
@@ -77,6 +87,7 @@ relaxationFactors
         U               0.7;
         k               0.7;
         epsilon         0.7;
+        "(T|Tr01|Tr02|Tr03|Tr04|Tr05|Tr06|Tr07|Tr08|Tr09|Tr10)"				0.7;
     }
 }
 
