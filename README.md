@@ -1,54 +1,54 @@
 # STE_JU2003
-Date: 2017/08/25
-Release: IOP9-R2
-No. of receptors: 9
+Date: 2017/08/25  
+Release: IOP9-R2  
+No. of receptors: 9  
 ***
 ## Experiment info
 ### Met
-Name: M01,	St. Anthony’s Hospital,	N 10th and Dewey
-Location: (633954,3927040,45)
-Wind direction: 182.33 ± 11.62 degree
-Wind speed: 7.41 m/s
+Name: M01,	St. Anthony’s Hospital,	N 10th and Dewey  
+Location: (633954,3927040,45)  
+Wind direction: 182.33 ± 11.62 degree  
+Wind speed: 7.41 m/s  
 ### Release site
-Name: Park
-Location: (634686,3926036,0)
-Strength: 2.0 g/s, continuous
+Name: Park  
+Location: (634686,3926036,0)  
+Strength: 2.0 g/s, continuous  
 ### Receptors
-Name:SF6 samplers
-No. Easting Northing height
-1. 054 634617 3926150 0
-2. 064 634602 3926283 0
-3. 065 634695 3926282 0
-4. 074 634622 3926383 0
-5. 084 634623 3926495 0
-6. 086 634781 3926490 0
-7. 094 634603 3926632 0
-8. 515 634651 3926912 0
-9. 516 634785 3926905 0
+Name:SF6 samplers  
+No. Easting Northing height  
+1. 054 634617 3926150 0  
+2. 064 634602 3926283 0  
+3. 065 634695 3926282 0  
+4. 074 634622 3926383 0  
+5. 084 634623 3926495 0  
+6. 086 634781 3926490 0  
+7. 094 634603 3926632 0  
+8. 515 634651 3926912 0  
+9. 516 634785 3926905 0  
 ***
 ## CFD info
 Model: center blocks (2,2)
 ### Location mapping 
-> (UTM E, UTM N) -> CFD location (x,y):
-> (634614.498,3925939.808) -> (500,550)
+> (UTM E, UTM N) -> CFD location (x,y):  
+> (634614.498,3925939.808) -> (500,550)  
 ### Computational domain:
-(1050,1350,200)
+(1050,1350,200)  
 ### Mesh info
-Total No.: 4067283, unstructured
-Min size: (2,2,2)
-snappyHexMesh: castellatedMesh true; snap true; addLayers false;
-refinmentBox: min (200,0,0) max (850,900,50)
+Total No.: 4067283, unstructured  
+Min size: (2,2,2)  
+snappyHexMesh: castellatedMesh true; snap true; addLayers false;  
+refinmentBox: min (200,0,0) max (850,900,50)  
 ### B.C.
-Wind direction: 180 degree
-Wind profile: power law, alpha = 0.35
-Ground: nutRoughWallFunction 0.29
+Wind direction: 180 degree  
+Wind profile: power law, alpha = 0.35  
+Ground: nutRoughWallFunction 0.29  
 ### Other settings
-Sc_t = 0.7
-Discretization: 1st order upwind
+Sc_t = 0.7  
+Discretization: 1st order upwind  
 ***
 ## STE info
 ### Potential source region
-'x <- seq(201,849,2)
-y <- seq(1,899,2)
-z <- seq(1,1,1)'
-Run by sampleDictMaker
+    x <- seq(201,849,2)  
+    y <- seq(1,899,2)  
+    z <- seq(1,1,1)  
+Run by sampleDictMaker  
