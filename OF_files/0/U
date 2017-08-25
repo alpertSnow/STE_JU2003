@@ -28,7 +28,7 @@ boundaryField
       value	$internalField;
       //valueExpression is written as __ ? __(true) : __(false)
       //valueExpression   "(pos().z<=0.6) ? vector(-7.5335*pow(pos().z,2.0)+10.962*pos().z+2.9155,0,0) : vector(6.751,0,0)"; 
-	  valueExpression   "vector(0,3.74*pow(pos().z/10,0.25),0)";
+	  valueExpression   "vector(0,7.41*pow(pos().z/45,0.35),0)";
     }
 	Outlet
     {

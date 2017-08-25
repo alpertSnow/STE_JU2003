@@ -42,7 +42,7 @@ refinmentBox: min (200,0,0) max (850,900,50)
 ### B.C.
 Wind direction: 180 degree  
 Wind profile: power law, alpha = 0.35  
-Ground: nutRoughWallFunction 0.29  
+Ground: nutkWallFunction  
 ### Other settings
 Sc_t = 0.7  
 Discretization: 1st order upwind  

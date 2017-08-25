@@ -29,7 +29,7 @@ boundaryField
       value	$internalField;
       //valueExpression is written as __ ? __(true) : __(false)
       //valueExpression   "(pos().z<=0.6) ? (-0.632*log(pos().z)+0.1144) : 0.4372"; 
-	  valueExpression   "pow(0.48,3)/0.4/pos().z*(1-pos().z/210)";
+	  valueExpression   "pow(0.48,3)/0.4/pos().z*(1-pos().z/200)";
     }
 	Outlet
     {
