@@ -36,7 +36,7 @@ Model: center blocks (2,2)
 ### Mesh info
 Total No.: 4067283, unstructured  
 Min size: (2,2,2)  
-snappyHexMesh: castellatedMesh true; snap true; addLayers false;  
+snappyHexMesh: castellatedMesh T; snap T; addLayers F;  
 refinmentBox: min (200,0,0) max (850,900,50)  
 ### B.C.
 Wind direction: 180 degree  
