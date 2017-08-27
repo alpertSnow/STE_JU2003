@@ -44,9 +44,10 @@ divSchemes
     div(phi,U)      Gauss upwind;
     div(phi,k)      Gauss upwind;
     div(phi,epsilon) Gauss upwind;
+    div(phi,T)      Gauss limitedLinear 1;
     div((nuEff*dev(T(grad(U))))) Gauss linear;
     div(-phi,Tr01)		Gauss limitedLinear 1;
-	div(-phi,Tr02)		Gauss limitedLinear 1;
+        div(-phi,Tr02)		Gauss limitedLinear 1;
 	div(-phi,Tr03)		Gauss limitedLinear 1;
 	div(-phi,Tr04)		Gauss limitedLinear 1;
 	div(-phi,Tr05)		Gauss limitedLinear 1;
