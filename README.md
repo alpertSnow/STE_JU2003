@@ -1,5 +1,5 @@
 # STE_JU2003_OF_files
-Date: 2017/08/27  
+Date: 2017/09/05  
 Release: IOP9-R2  
 No. of receptors: 7  
 ***
@@ -27,7 +27,7 @@ No. Easting Northing height
 ## CFD airflow info
 Turbulence model: SKE
 Solver: simpleFoam
-Building model: center blocks (2,2)
+Building model: revised center blocks (2,2)
 ### Location mapping 
 > (UTM E, UTM N) -> CFD location (x,y):  
 > (634614.498,3925939.808) -> (500,550)  
