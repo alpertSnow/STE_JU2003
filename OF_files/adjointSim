@@ -1,6 +1,6 @@
 #!/bin/bash
-# of211
-decomposePar -force 2>Err_adj 1>log_adj
+of211
+decomposePar -force 2>err_adj 1>log_adj
 mpirun -np 8 adjoint7FixedFlowSimpleFoamSource -parallel 2>>err_adj 1>>log_adj
 reconstructPar -latestTime 2>>err_adj 1>>log_adj
-rm -r processor*
+sample -latestTime 2>>err_adj 1>>log_adj

@@ -1,8 +1,6 @@
 #!/bin/bash
 of211
 decomposePar -force 2>err 1>log
-bash solve.bash &
-bash res.bash &
-wait
+mpirun -np 8 simpleFoam -parallel 2>>err 1>>log
 reconstructPar -latestTime 2>>err 1>>log
-rm -r processor*
+

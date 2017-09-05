@@ -1,0 +1,16 @@
+# for T and 7 adjoints
+# run in shell: gnuplot adjResiduals -
+set logscale y
+set title "Residuals"
+set ylabel 'Residual'
+set xlabel 'Iteration'
+plot "< cat log_adj | grep 'Solving for T,' | cut -d' ' -f9 | tr -d ','" title 'T' with lines,\
+"< cat log_adj | grep 'Solving for Tr01' | cut -d' ' -f9 | tr -d ','" title 'Tr01' with lines,\
+"< cat log_adj | grep 'Solving for Tr02' | cut -d' ' -f9 | tr -d ','" title 'Tr02' with lines,\
+"< cat log_adj | grep 'Solving for Tr03' | cut -d' ' -f9 | tr -d ','" title 'Tr03' with lines,\
+"< cat log_adj | grep 'Solving for Tr04' | cut -d' ' -f9 | tr -d ','" title 'Tr04' with lines,\
+"< cat log_adj | grep 'Solving for Tr05' | cut -d' ' -f9 | tr -d ','" title 'Tr05' with lines,\
+"< cat log_adj | grep 'Solving for Tr06' | cut -d' ' -f9 | tr -d ','" title 'Tr06' with lines,\
+"< cat log_adj | grep 'Solving for Tr07' | cut -d' ' -f9 | tr -d ','" title 'Tr07' with lines
+pause 1
+reread

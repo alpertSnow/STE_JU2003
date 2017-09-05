@@ -1,4 +1,5 @@
 # for k-epsilon models
+# run in shell: gnuplot Residuals -
 set logscale y
 set title "Residuals"
 set ylabel 'Residual'
