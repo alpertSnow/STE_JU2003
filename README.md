@@ -1,7 +1,7 @@
-# STE_JU2003
-Date: 2017/08/25  
+# STE_JU2003_OF_files
+Date: 2017/08/27  
 Release: IOP9-R2  
-No. of receptors: 9  
+No. of receptors: 7  
 ***
 ## Experiment info
 ### Met
@@ -23,8 +23,6 @@ No. Easting Northing height
 5. 084 634623,3926495,0,  
 6. 086 634781,3926490,0,  
 7. 094 634603,3926632,0,  
-8. 515 634651,3926912,0,  
-9. 516 634785,3926905,0,  
 ***
 ## CFD airflow info
 Turbulence model: SKE
